@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff5f9e, #ff87ab);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* Карточка */
+.card {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 45px 35px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    animation: fadeIn 1s ease;
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+#subtext {
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* GIF */
+.gif {
+    width: 230px;
+    max-width: 80%;
+    border-radius: 18px;
+    margin: 20px auto;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+/* Кнопки */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 14px 36px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+#yes-btn {
+    background: white;
+    color: #ff3d6f;
+    animation: pulse 1.5s infinite;
+}
+
+#no-btn {
+    background: rgba(255,255,255,0.35);
+    color: white;
+}
+
+#yes-btn:hover {
+    transform: scale(1.15);
+}
+
+/* Сердечки */
+.heart {
+    position: absolute;
+    bottom: -20px;
+    animation: fly 4s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
